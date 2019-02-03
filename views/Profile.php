@@ -27,10 +27,10 @@ error_reporting(E_ALL);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css"
-          href="http://jbose.greenriverdev.com/IT328/Bose_Jarod_Dating/styles/styles.css?
+          href="http://jbose.greenriverdev.com/IT328_2019/dating/styles/styles.css?
           <?php echo time(); ?>">
     <link rel="stylesheet"
-          href="http://jbose.greenriverdev.com/IT328/Bose_Jarod_Dating/styles/css/bootstrap.min.css">
+          href="http://jbose.greenriverdev.com/IT328_2019/dating/styles/css/bootstrap.min.css">
     <title>Profile</title>
 </head>
 <body>
