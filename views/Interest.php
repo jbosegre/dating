@@ -32,10 +32,10 @@ error_reporting(E_ALL);
     <h3>My Dating Website</h3>
     <div class="container">
         <div class="navbar-nav">
-            <a class="nav-item nav-link" href="pages/home.html">Home</a>
-            <a class="nav-item nav-link" href="Personal_Information">Personal Info</a>
-            <a class="nav-item nav-link" href="Profile">Profile</a>
-            <a class="nav-item nav-link active" href="Interest">Interest</a>
+            <a class="nav-item nav-link" href="home.html">Home</a>
+            <a class="nav-item nav-link" href="Personal_Information.php">Personal Info</a>
+            <a class="nav-item nav-link" href="Profile.php">Profile</a>
+            <a class="nav-item nav-link active" href="Interest.php">Interest</a>
         </div>
     </div>
 </nav>
@@ -43,7 +43,7 @@ error_reporting(E_ALL);
     <figure id="border">
         <figcaption>
             <h1 class="ml-5"><br><strong>Interest</strong></h1>
-            <form action="Interest" method="post">
+            <form action="Profile_Summary.php" method="post">
                 <fieldset form="form-group">
                     <div class="form-group ml-lg-2">
                         <label class="d-block" id="InputTitle2">Indoor Activities</label>
@@ -167,9 +167,8 @@ error_reporting(E_ALL);
                         </div>
                     </div>
                     <a id="adjustButton">
-                        <a href="http://jbose.greenriverdev.com/IT328/Bose_Jarod_Dating/
-                        Profile_Summary"><button class="btn btn-primary" name="submit" type="submit">
-                                Next</button></a>
+                        <a href="http://jbose.greenriverdev.com/IT328_2019/dating/Profile_Summary">
+                            <button class="btn btn-primary" name="submit" type="submit">Next</button></a>
                     </div>
                 </fieldset>
             </form>

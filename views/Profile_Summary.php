@@ -37,10 +37,10 @@ error_reporting(E_ALL);
     <h3>My Dating Website</h3>
     <div class="container">
         <div class="navbar-nav">
-            <a class="nav-item nav-link" href="pages/home.html">Home</a>
-            <a class="nav-item nav-link" href="Personal_Information">Personal Info</a>
-            <a class="nav-item nav-link" href="Profile">Profile</a>
-            <a class="nav-item nav-link" href="Interest">Interest</a>
+            <a class="nav-item nav-link" href="home.html">Home</a>
+            <a class="nav-item nav-link" href="Personal_Information.php">Personal Info</a>
+            <a class="nav-item nav-link" href="Profile.php">Profile</a>
+            <a class="nav-item nav-link" href="Interest.php">Interest</a>
         </div>
     </div>
 </nav>

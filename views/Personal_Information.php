@@ -1,7 +1,7 @@
 <?php
 //start session
-//ob_start();
-//session_start();
+ob_start();
+session_start();
 
 /**
  * Created by PhpStorm.
@@ -35,10 +35,10 @@ error_reporting(E_ALL);
     <h3>My Dating Website</h3>
     <div class="container">
         <div class="navbar-nav">
-            <a class="nav-item nav-link" href="pages/home.html">Home</a>
-            <a class="nav-item nav-link active" href="Personal_Information">Personal Info</a>
-            <a class="nav-item nav-link" href="Profile">Profile</a>
-            <a class="nav-item nav-link" href="Interest">Interest</a>
+            <a class="nav-item nav-link" href="home.html">Home</a>
+            <a class="nav-item nav-link active" href="Personal_Information.php">Personal Info</a>
+            <a class="nav-item nav-link" href="Profile.php">Profile</a>
+            <a class="nav-item nav-link" href="Interest.php">Interest</a>
         </div>
     </div>
 </nav>
@@ -46,7 +46,7 @@ error_reporting(E_ALL);
     <figure id="border">
         <figcaption>
             <h1 class="ml-5"><br><strong>Personal Information</strong></h1>
-            <form action="Personal_Information" method="post">
+            <form action="Profile.php" method="post">
                 <fieldset form="form-group">
                     <div class="col-lg-6">
                         <p id="InputTitle4">First Name</p>
@@ -87,9 +87,8 @@ error_reporting(E_ALL);
                                    echo $_POST['phoneNumber'];?>">
                     </div>
                     <div id="adjustButton">
-                        <a href="http://jbose.greenriverdev.com/IT328/Bose_Jarod_Dating/
-                        Profile"><button class="btn btn-primary" name="submit"
-                                                      type="submit">Next</button></a>
+                        <!--<a href="http://jbose.greenriverdev.com/IT328_2019/dating/views/Profile">i</a>-->
+                            <button class="btn btn-primary" name="submit" type="submit">Next</button>
                     </div>
                 </fieldset>
             </form>

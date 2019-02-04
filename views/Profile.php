@@ -38,10 +38,10 @@ error_reporting(E_ALL);
     <h3>My Dating Website</h3>
     <div class="container">
         <div class="navbar-nav">
-            <a class="nav-item nav-link" href="pages/home.html">Home</a>
-            <a class="nav-item nav-link" href="Personal_Information">Personal Info</a>
-            <a class="nav-item nav-link active" href="Profile">Profile</a>
-            <a class="nav-item nav-link" href="Interest">Interest</a>
+            <a class="nav-item nav-link" href="home.html">Home</a>
+            <a class="nav-item nav-link" href="Personal_Information.php">Personal Info</a>
+            <a class="nav-item nav-link active" href="Profile.php">Profile</a>
+            <a class="nav-item nav-link" href="Interest.php">Interest</a>
         </div>
     </div>
 </nav>
@@ -49,7 +49,7 @@ error_reporting(E_ALL);
     <figure id="border">
         <figcaption>
             <h1 class="ml-5"><br><strong>Profile</strong></h1>
-            <form action="Profile" method="post">
+            <form action="Interest.php" method="post">
                 <fieldset form="form-group">
                     <div class="col-lg-6" id="InputTitle5">
                         <p id="InputTitle4">Email</p>
@@ -79,9 +79,8 @@ error_reporting(E_ALL);
                                 == 'female') echo ' checked'; ?>>
                     </div>
                     <div id="adjustButton">
-                        <a href="http://jbose.greenriverdev.com/IT328/Bose_Jarod_Dating/
-                        Interest"><button class="btn btn-primary"
-                                                       name="submit" type="submit">Next</button></a>
+                        <a href="http://jbose.greenriverdev.com/IT328_2019/dating/views/Interest">
+                            <button class="btn btn-primary" name="submit" type="submit">Next</button></a>
                     </div>
                 </fieldset>
             </form>
