@@ -48,7 +48,7 @@ error_reporting(E_ALL);
         <figcaption>
             <h1 class="ml-5"><br><strong>Personal Information</strong></h1>
             <form action="Profile.php" method="post">
-                <fieldset form="form-group">
+                <fieldset>
                     <div class="col-lg-6">
                         <p id="InputTitle4">First Name</p>
                         <!--<check if="{{isset(@errors['fname'])}}">
@@ -81,17 +81,17 @@ error_reporting(E_ALL);
                                value="<?php if(isset($_POST['age'])) echo $_POST['age'];?>">
                     </div>
                     <div class="col-lg-6">
-                        <p id="InputTitle2">Gender</p>
-                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Male
-                        <input class="ml-2" type="radio" name="gender" id="gender" value="male"
+                        <p id="InputTitle7">Gender</p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Male
+                        <input class="ml-2" type="radio" name="gender" id="genderm" value="male"
                             <?php if (isset($_POST['gender']) and $_POST['gender']
                                 == 'male') echo ' checked'; ?>>
-                        &nbsp Female <input type="radio" name="gender" id="gender" value="female"
+                        &nbsp; Female <input type="radio" name="gender" id="genderf" value="female"
                             <?php if (isset($_POST['gender']) and $_POST['gender']
                                 == 'female') echo ' checked'; ?>>
                     </div>
                     <div class="col-lg-6">
-                        <p id="InputTitle2">Phone Number</p>
+                        <p id="InputTitle8">Phone Number</p>
                         <!--<check if="{{isset(@errors['phoneNumber'])}}">
                             <p>{{@errors['phoneNumber']}}</p>
                         </check>-->

@@ -27,8 +27,7 @@ error_reporting(E_ALL);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css"
-          href="http://jbose.greenriverdev.com/IT328_2019/dating/styles/styles.css?
-          <?php echo time(); ?>">
+          href="http://jbose.greenriverdev.com/IT328_2019/dating/styles/styles.css?">
     <link rel="stylesheet"
           href="http://jbose.greenriverdev.com/IT328_2019/dating/styles/css/bootstrap.min.css">
     <title>Profile</title>
@@ -50,14 +49,14 @@ error_reporting(E_ALL);
         <figcaption>
             <h1 class="ml-5"><br><strong>Profile</strong></h1>
             <form action="Interest.php" method="post">
-                <fieldset form="form-group">
+                <fieldset>
                     <div class="col-lg-6" id="InputTitle5">
                         <p id="InputTitle4">Email</p>
                         <input class="form-control ml-5" type="text" name="email"
                                value="<?php if(isset($_POST['email'])) echo $_POST['email'];?>">
                     </div>
                     <div class="col-lg-5" id="biography">
-                        <p id="InputTitle4">Biography</p>
+                        <p id="InputTitle9">Biography</p>
                         <textarea class="form-control ml-5" rows="6" name="biography"
                                   <?php if(isset($_POST['biography'])) echo $_POST['biography'];?>>
                         </textarea>
@@ -70,17 +69,17 @@ error_reporting(E_ALL);
                     </div>
                     <div class="col-lg-6">
                         <p id="InputTitle2">Seeking</p>
-                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Male
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Male
                         <input class="ml-2" type="radio" name="seekGender" value="male"
                             <?php if (isset($_POST['seekGender']) and $_POST['seekGender']
                                 == 'male') echo ' checked'; ?>>
-                        &nbsp Female <input type="radio" name="seekGender" value="female"
+                        &nbsp; Female <input type="radio" name="seekGender" value="female"
                             <?php if (isset($_POST['seekGender']) and $_POST['seekGender']
                                 == 'female') echo ' checked'; ?>>
                     </div>
                     <div id="adjustButton">
-                        <a href="http://jbose.greenriverdev.com/IT328_2019/dating/views/Interest">
-                            <button class="btn btn-primary" name="submit" type="submit">Next</button></a>
+                        <!--<a href="http://jbose.greenriverdev.com/IT328_2019/dating/views/Interest"></a>-->
+                            <button class="btn btn-primary" name="submit" type="submit">Next</button>
                     </div>
                 </fieldset>
             </form>
