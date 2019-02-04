@@ -1,6 +1,6 @@
 <!--
     Jarod Bose
-    2/2/2018
+    2/3/2019
     Assignment 2 Dating site
     Profile Summary page showing users inputs
 -->
@@ -12,8 +12,8 @@
 /**
  * Created by PhpStorm.
  * User: humme_000
- * Date: 2/2/2018
- * Time: 11:52 AM
+ * Date: 2/3/2019
+ * Time: 1:52 PM
  */
 
 //error reporting

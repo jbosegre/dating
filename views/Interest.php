@@ -1,6 +1,6 @@
 <!--
     Jarod Bose
-    2/2/2018
+    2/3/2019
     Assignment 2 Dating site
     interest page showing inputs for user's favorite hobby
 -->
@@ -8,8 +8,8 @@
 /**
  * Created by PhpStorm.
  * User: humme_000
- * Date: 2/2/2018
- * Time: 11:44 AM
+ * Date: 2/3/2019
+ * Time: 12:44 PM
  */
 
 //error reporting

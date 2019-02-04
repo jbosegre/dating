@@ -1,6 +1,6 @@
 <!--
     Jarod Bose
-    2/2/2018
+    2/3/2019
     Assignment 2 Dating site
     Profile page showing inputs for state, email, biography and gender to seek for
 -->
@@ -12,8 +12,8 @@
 /**
  * Created by PhpStorm.
  * User: humme_000
- * Date: 2/2/2018
- * Time: 11:43 AM
+ * Date: 2/3/2019
+ * Time: 12:23 PM
  */
 
 //error reporting
