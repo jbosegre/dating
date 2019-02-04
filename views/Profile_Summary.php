@@ -49,21 +49,21 @@ error_reporting(E_ALL);
         <figcaption>
             <div>
                 <table>
-                    <tr><th>Name: {{ @fname }} {{ @lname }} </th></tr>
-                    <tr><td>Gender: {{ @gender }} </td></tr>
-                    <tr><td>Age: {{ @age }} </td></tr>
-                    <tr><td>Phone: {{ @phoneNumber }} </td></tr>
-                    <tr><td>Email: {{ @email }} </td></tr>
-                    <tr><td>State: {{ @state }} </td></tr>
-                    <tr><td>Seeking: {{ @seekGender }} </td></tr>
-                    <tr><td>Interest: {{ @indoor }} , {{ outdoor }} </td></tr>
+                    <tr><th>Name: {{ @SESSION.fname }} {{ @SESSION.lname }} </th></tr>
+                    <tr><td>Gender: {{ @SESSION.gender }} </td></tr>
+                    <tr><td>Age: {{ @SESSION.age }} </td></tr>
+                    <tr><td>Phone: {{ @SESSION.phoneNumber }} </td></tr>
+                    <tr><td>Email: {{ @SESSION.email }} </td></tr>
+                    <tr><td>State: {{ @SESSION.state }} </td></tr>
+                    <tr><td>Seeking: {{ @SESSION.seekGender }} </td></tr>
+                    <tr><td>Interest: {{ @SESSION.indoor }} , {{ @SESSION.outdoor }} </td></tr>
                 </table>
             </div>
             <div class="col-lg-5" id="biography">
                 <h6 id="InputTitle6">Biography</h6>
                 <br>
                 <br>
-                <p>{{ @biography }} </p>
+                <p>{{ @SESSION.biography }} </p>
             </div>
             <div id="adjustButton">
                 <button class="btn btn-primary" id="contact">Contact Me!</button>

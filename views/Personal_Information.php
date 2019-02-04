@@ -1,7 +1,7 @@
 <?php
 //start session
-ob_start();
-session_start();
+//ob_start();
+//session_start();
 
 /**
  * Created by PhpStorm.
@@ -50,8 +50,11 @@ error_reporting(E_ALL);
                 <fieldset form="form-group">
                     <div class="col-lg-6">
                         <p id="InputTitle4">First Name</p>
-                        <input class="form-control ml-5" type="text" name="firstName" placeholder="First Name"
-                               value="<?php if(isset($_POST['firstName'])) echo $_POST['firstName'];?>">
+                        <!--<check if="{{isset(@errors['fname'])}}">
+                            <p>{{@errors['fname']}}</p>
+                        </check>-->
+                        <input class="form-control ml-5" type="text" name="fname" id="fname" placeholder="First Name"
+                               value="<?php if(isset($_POST['fname'])) echo $_POST['fname'];?>">
                     </div>
                     <div id="box">
                         <p>
@@ -62,29 +65,37 @@ error_reporting(E_ALL);
                     </div>
                     <div class="col-lg-6">
                         <p id="InputTitle3">Last Name</p>
-                        <input class="form-control ml-5" type="text" name="lastName" placeholder="Last Name"
-                               value="<?php if(isset($_POST['lastName'])) echo $_POST['lastName'];?>">
+                        <!--<check if="{{isset(@errors['lname'])}}">
+                            <p>{{@errors['lname']}}</p>
+                        </check>-->
+                        <input class="form-control ml-5" type="text" name="lname" id="lname" placeholder="Last Name"
+                               value="<?php if(isset($_POST['lname'])) echo $_POST['lname'];?>">
                     </div>
                     <div class="col-lg-6">
                         <p id="InputTitle2">Age</p>
-                        <input class="form-control ml-5" type="text" name="age" placeholder="Age"
+                        <!--<check if="{{isset(@errors['age'])}}">
+                            <p>{{@errors['age']}}</p>
+                        </check>-->
+                        <input class="form-control ml-5" type="text" name="age" id="age" placeholder="Age"
                                value="<?php if(isset($_POST['age'])) echo $_POST['age'];?>">
                     </div>
                     <div class="col-lg-6">
                         <p id="InputTitle2">Gender</p>
                         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Male
-                        <input class="ml-2" type="radio" name="gender" value="male"
+                        <input class="ml-2" type="radio" name="gender" id="gender" value="male"
                             <?php if (isset($_POST['gender']) and $_POST['gender']
                                 == 'male') echo ' checked'; ?>>
-                        &nbsp Female <input type="radio" name="gender" value="female"
+                        &nbsp Female <input type="radio" name="gender" id="gender" value="female"
                             <?php if (isset($_POST['gender']) and $_POST['gender']
                                 == 'female') echo ' checked'; ?>>
                     </div>
                     <div class="col-lg-6">
                         <p id="InputTitle2">Phone Number</p>
-                        <input class="form-control ml-5" type="text" name="phoneNumber"
-                               placeholder="Phone Number" value="<?php if(isset($_POST['phoneNumber']))
-                                   echo $_POST['phoneNumber'];?>">
+                        <!--<check if="{{isset(@errors['phoneNumber'])}}">
+                            <p>{{@errors['phoneNumber']}}</p>
+                        </check>-->
+                        <input class="form-control ml-5" type="text" name="phoneNumber" id="phoneNumber"
+                               placeholder="Phone Number" value="<?php if(isset($_POST['phoneNumber'])) echo $_POST['phoneNumber'];?>">
                     </div>
                     <div id="adjustButton">
                         <!--<a href="http://jbose.greenriverdev.com/IT328_2019/dating/views/Profile">i</a>-->

@@ -32,60 +32,72 @@ $f3->route('GET /', function (){
 $f3->route('GET|POST /views/Personal_Information',
     function($f3)
     {
+        $_SESSION=array();
         $template = new Template();
         if (isset($_POST['submit']) && !empty($_POST)) {
 
             $isValid = true;
 
-            if(!empty($_POST["firstName"]) && validName($_POST["firstName"]))
+            if(!empty($_POST["fname"]))
             {
-                $_SESSION["firstName"] = $_POST["firstName"];
+                $fname = $_POST["fname"];
+                if(validName($fname))
+                {
+                    $_SESSION["fname"]=$fname;
+                }
             }
             else
             {
-                echo"<p>Please enter your First Name</p>";
+                $f3->set("error['fname']","Please enter your first name.");
                 $isValid = false;
             }
 
-            if(!empty($_POST["lastName"]) && validName($_POST["lastName"]))
+            if(!empty($_POST["lname"]) && validName($_POST["lname"]))
             {
-                $_SESSION["lastName"] = $_POST["lastName"];
+                $lname = $_POST["lname"];
+                if(validName($lname))
+                {
+                    $_SESSION["lname"]=$lname;
+                }
             }
             else
             {
-                echo"<p>Please enter your Last Name</p>";
+                $f3->set("error['lname']","Please enter your Last name.");
                 $isValid = false;
             }
 
-            if(isset($_POST["gender"]))
+            if(isset($_POST["age"]))
             {
-                $_SESSION["gender"] = $_POST["gender"];
+                $age = $_POST["age"];
+                if(validAge($age))
+                {
+                    $_SESSION["age"]=$age;
+                }
             }
             else
             {
-                echo"<p>Please Enter your Gender</p>";
+                $f3->set("error['age']","Please enter your age.");
                 $isValid = false;
             }
 
-            if(!empty($_POST["phoneNumber"]) && validPhone($_POST["phoneNumber"]))
+            if(!empty($_POST["phoneNumber"]))
             {
-                $_SESSION["phoneNumber"] = $_POST["phoneNumber"];
+                $phoneNumber = $_POST["phoneNumber"];
+                if(validPhone($phoneNumber))
+                {
+                    $_SESSION["phoneNumber"]=$phoneNumber;
+                }
             }
             else
             {
-                echo"<p>Please enter your phone number in ten digits only</p>";
+                $f3->set("error['phoneNumber']","Please enter your phone number in 10 digits only.");
                 $isValid = false;
             }
 
             if($isValid)
             {
-                $f3->set('fname', $_SESSION['firstName']);
-                $f3->set('lname', $_SESSION['lastName']);
-                $f3->set('age', $_SESSION['age']);
-                $f3->set('gender', $_SESSION['gender']);
-                $f3->set('phoneNumber', $_SESSION['phoneNumber']);
-                $f3->reroute('/views/Profile_Summary');
-                echo $template::instance()->render('pages/Profile_Summary.php');
+                $f3->reroute('/views/Profile.php');
+                echo $template::instance()->render('/views/Profile_Summary.php');
             }
         }
         echo $template->render('views/Profile.php');
@@ -95,6 +107,7 @@ $f3->route('GET|POST /views/Personal_Information',
 $f3->route('GET|POST /views/Profile',
     function($f3)
     {
+        $_SESSION=array();
         $template = new Template();
         if (isset($_POST['submit']) && !empty($_POST)) {
 
@@ -139,7 +152,7 @@ $f3->route('GET|POST /views/Profile',
                 $f3->set('state', $_SESSION['state']);
                 $f3->set('seekGender', $_SESSION['seekGender']);
                 $f3->reroute('/views/Interest');
-                //echo $template::instance()->render('pages/Profile_Summary.php');
+                echo $template::instance()->render('pages/Profile_Summary.php');
             }
         }
         echo $template->render('views/Profile.php');
@@ -149,6 +162,7 @@ $f3->route('GET|POST /views/Profile',
 $f3->route('GET|POST /views/Interest',
     function($f3)
     {
+        $_SESSION=array();
         $template = new Template();
         if (isset($_POST['submit']) && !empty($_POST)) {
 
@@ -172,8 +186,8 @@ $f3->route('GET|POST /views/Interest',
             {
                 $f3->set('indoor', $_SESSION['indoor[]']);
                 $f3->set('outdoor', $_SESSION['outdoor[]']);
-                $f3->reroute('/Profile_Summary');
-                //echo $template::instance()->render('pages/Profile_Summary.php');
+                $f3->reroute('views/Profile_Summary');
+                echo $template::instance()->render('pages/Profile_Summary.php');
             }
         }
         echo $template->render('views/Interest.php');

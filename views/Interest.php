@@ -49,28 +49,28 @@ error_reporting(E_ALL);
                         <label class="d-block" id="InputTitle2">Indoor Activities</label>
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="indoor[]"
+                                <input class="form-check-input" type="checkbox" name="indoor[]" id="indoor[]"
                                        value="TV" <?php if (isset($_POST['indoor[]']) and $_POST['indoor[]']
                                     == 'TV') echo ' checked'; ?>> TV
                             </label>
                         </div>
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="indoor[]"
+                                <input class="form-check-input" type="checkbox" name="indoor[]" id="indoor[]"
                                        value="Movies" <?php if (isset($_POST['indoor[]'])
                                     and $_POST['indoor[]'] == 'Movies') echo ' checked'; ?>> Movies
                             </label>
                         </div>
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="indoor[]"
+                                <input class="form-check-input" type="checkbox" name="indoor[]" id="indoor[]"
                                        value="Cooking" <?php if (isset($_POST['indoor[]'])
                                     and $_POST['indoor[]'] == 'Cooking') echo ' checked'; ?>> Cooking
                             </label>
                         </div>
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="indoor[]"
+                                <input class="form-check-input" type="checkbox" name="indoor[]" id="indoor[]"
                                        value="Boards_Cards" <?php if (isset($_POST['indoor[]'])
                                     and $_POST['indoor[]'] == 'Boards_Cards') echo ' checked'; ?>>
                                 Board and Card Games
@@ -79,28 +79,28 @@ error_reporting(E_ALL);
                          <br>
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="indoor[]"
+                                <input class="form-check-input" type="checkbox" name="indoor[]" id="indoor[]"
                                        value="Puzzles" <?php if (isset($_POST['indoor[]'])
                                     and $_POST['indoor[]'] == 'Puzzles') echo ' checked'; ?>> Puzzles
                             </label>
                         </div>
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="indoor[]"
+                                <input class="form-check-input" type="checkbox" name="indoor[]" id="indoor[]"
                                        value="Reading" <?php if (isset($_POST['indoor[]'])
                                     and $_POST['indoor[]'] == 'Reading') echo ' checked'; ?>> Reading
                             </label>
                         </div>
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="indoor[]"
+                                <input class="form-check-input" type="checkbox" name="indoor[]" id="indoor[]"
                                        value="Video_Games" <?php if (isset($_POST['indoor[]'])
                                     and $_POST['indoor[]'] == 'Video_Games') echo ' checked'; ?>> Video Games
                             </label>
                         </div>
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="indoor[]"
+                                <input class="form-check-input" type="checkbox" name="indoor[]" id="indoor[]"
                                        value="Others" <?php if (isset($_POST['indoor[]'])
                                     and $_POST['indoor[]'] == 'Others') echo ' checked'; ?>> Others
                             </label>
@@ -110,28 +110,28 @@ error_reporting(E_ALL);
                         <label class="d-block" id="InputTitle2">Outdoor Activities</label>
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="outdoor[]"
+                                <input class="form-check-input" type="checkbox" name="outdoor[]" id="outdoor[]"
                                        value="Hiking" <?php if (isset($_POST['outdoor[]'])
                                     and $_POST['outdoor[]'] == 'Hiking') echo ' checked'; ?>> Hiking
                             </label>
                         </div>
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="outdoor[]"
+                                <input class="form-check-input" type="checkbox" name="outdoor[]" id="outdoor[]"
                                        value="Biking" <?php if (isset($_POST['outdoor[]'])
                                     and $_POST['outdoor[]'] == 'Biking') echo ' checked'; ?>> Biking
                             </label>
                         </div>
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="outdoor[]"
+                                <input class="form-check-input" type="checkbox" name="outdoor[]" id="outdoor[]"
                                        value="Swimming" <?php if (isset($_POST['outdoor[]'])
                                     and $_POST['outdoor[]'] == 'Swimming') echo ' checked'; ?>> Swimming
                             </label>
                         </div>
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="outdoor[]"
+                                <input class="form-check-input" type="checkbox" name="outdoor[]" id="outdoor[]"
                                        value="Collecting" <?php if (isset($_POST['outdoor[]'])
                                     and $_POST['outdoor[]'] == 'Collecting') echo ' checked'; ?>> Collecting
                             </label>
@@ -139,28 +139,28 @@ error_reporting(E_ALL);
                         <br>
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="outdoor[]"
+                                <input class="form-check-input" type="checkbox" name="outdoor[]" id="outdoor[]"
                                        value="Walking" <?php if (isset($_POST['outdoor[]'])
                                     and $_POST['outdoor[]'] == 'Walking') echo ' checked'; ?>> Walking
                             </label>
                         </div>
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="outdoor[]"
+                                <input class="form-check-input" type="checkbox" name="outdoor[]" id="outdoor[]"
                                        value="Climbing" <?php if (isset($_POST['outdoor[]'])
                                     and $_POST['outdoor[]'] == 'Climbing') echo ' checked'; ?>> Climbing
                             </label>
                         </div>
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="outdoor[]"
+                                <input class="form-check-input" type="checkbox" name="outdoor[]" id="outdoor[]"
                                        value="Gardening" <?php if (isset($_POST['outdoor[]'])
                                     and $_POST['outdoor[]'] == 'Gardening') echo ' checked'; ?>> Gardening
                             </label>
                         </div>
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="outdoor[]"
+                                <input class="form-check-input" type="checkbox" name="outdoor[]" id="outdoor[]"
                                        value="Others" <?php if (isset($_POST['outdoor[]'])
                                     and $_POST['outdoor[]'] == 'Others') echo ' checked'; ?>> Others
                             </label>
