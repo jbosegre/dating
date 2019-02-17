@@ -21,6 +21,8 @@ session_start();
 $f3 = Base::instance();
 $f3->set('DEBUG', 3);
 
+//defining global variables
+$GLOBALS["premium"];
 
 //define a default route
 $f3->route('GET|POST /', function (){
@@ -101,6 +103,12 @@ $f3->route('GET|POST /Personal_Information',
                 $isValid = false;
             }
 
+            if(isset($_POST["premium"]))
+            {
+                $_SESSION["premium"] = $_POST["premium"];
+                $GLOBALS["premium"] = $_SESSION["premium"];
+            }
+
             if($isValid)
             {
                 $f3->reroute('/Profile');
@@ -118,6 +126,7 @@ $f3->route('GET|POST /Profile',
     function($f3)
     {
         $_SESSION=array();
+        $GLOBALS ;
         $template = new Template();
         if (isset($_POST['submit']) && !empty($_POST)) {
 
@@ -155,13 +164,21 @@ $f3->route('GET|POST /Profile',
                 $isValid = false;
             }
 
-            if ($isValid)
+            if($isValid && isset($GLOBALS["premium"]))
             {
                 $f3->set('email', $_SESSION['email']);
                 $f3->set('biography', $_SESSION['biography']);
                 $f3->set('state', $_SESSION['state']);
                 $f3->set('seekGender', $_SESSION['seekGender']);
                 $f3->reroute('/Interest');
+            }
+            elseif ($isValid)
+            {
+                $f3->set('email', $_SESSION['email']);
+                $f3->set('biography', $_SESSION['biography']);
+                $f3->set('state', $_SESSION['state']);
+                $f3->set('seekGender', $_SESSION['seekGender']);
+                $f3->reroute('/Profile_Summary');
             }
             else
             {
