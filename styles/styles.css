@@ -47,7 +47,25 @@
     font-weight: bold;
 }
 
+#InputTitle7{
+    margin-top: 10px;
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+#InputTitle8{
+    margin-top: 10px;
+    margin-left: 50px;
+    font-weight: bold;
+}
+
 #InputTitle4{
+    margin-left: 50px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#InputTitle9{
     margin-left: 50px;
     margin-top: 20px;
     font-weight: bold;

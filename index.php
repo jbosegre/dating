@@ -23,13 +23,20 @@ $f3->set('DEBUG', 3);
 
 
 //define a default route
-$f3->route('GET /', function (){
+$f3->route('GET|POST /', function (){
+
     $view =  new View;
-    echo $view->render
-    ('views/home.html');
+    if (isset($_POST['submit']) && !empty($_POST)) {
+        echo $view->render
+        ('views/Personal_Information.html');
+    }
+    else
+    {
+        echo $view->render('views/home.html');
+    }
 });
 
-$f3->route('GET|POST /views/Personal_Information',
+$f3->route('GET|POST /Personal_Information',
     function($f3)
     {
         $_SESSION=array();
@@ -96,15 +103,18 @@ $f3->route('GET|POST /views/Personal_Information',
 
             if($isValid)
             {
-                $f3->reroute('/views/Profile.php');
-                echo $template::instance()->render('/views/Profile_Summary.php');
+                $f3->reroute('/Profile');
+                /*echo $template::instance()->render('/views/Profile_Summary.php');*/
             }
         }
-        echo $template->render('views/Profile.php');
+        else
+        {
+            echo $template->render('views/Personal_Information.html');
+        }
     }
 );
 
-$f3->route('GET|POST /views/Profile',
+$f3->route('GET|POST /Profile',
     function($f3)
     {
         $_SESSION=array();
@@ -151,15 +161,18 @@ $f3->route('GET|POST /views/Profile',
                 $f3->set('biography', $_SESSION['biography']);
                 $f3->set('state', $_SESSION['state']);
                 $f3->set('seekGender', $_SESSION['seekGender']);
-                $f3->reroute('/views/Interest');
-                echo $template::instance()->render('pages/Profile_Summary.php');
+                $f3->reroute('/Interest');
+            }
+            else
+            {
+                echo $template->render('views/Profile.html');
             }
         }
-        echo $template->render('views/Profile.php');
+        echo $template->render('views/Profile.html');
     }
 );
 
-$f3->route('GET|POST /views/Interest',
+$f3->route('GET|POST /Interest',
     function($f3)
     {
         $_SESSION=array();
@@ -186,8 +199,11 @@ $f3->route('GET|POST /views/Interest',
             {
                 $f3->set('indoor', $_SESSION['indoor[]']);
                 $f3->set('outdoor', $_SESSION['outdoor[]']);
-                $f3->reroute('views/Profile_Summary');
-                echo $template::instance()->render('pages/Profile_Summary.php');
+                $f3->reroute('/Profile_Summary');
+            }
+            else
+            {
+                echo $template->render('views/Interest.php');
             }
         }
         echo $template->render('views/Interest.php');
@@ -195,9 +211,12 @@ $f3->route('GET|POST /views/Interest',
 );
 
 
-$f3->route('GET|POST /views/Profile_Summary',
-    function()
+$f3->route('GET|POST /Profile_Summary',
+    function($f3)
     {
+        $_SESSION["color"] = $_POST[color];
+        $f3->set("color", $_SESSION["color"]);
+
         $template = new Template();
         echo $template->render('views/Profile_Summary.php');
     }
