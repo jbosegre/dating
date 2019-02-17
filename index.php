@@ -111,6 +111,10 @@ $f3->route('GET|POST /Personal_Information',
 
             if($isValid)
             {
+                $f3->set('fname', $_SESSION['fname']);
+                $f3->set('lname', $_SESSION['lname']);
+                $f3->set('age', $_SESSION['age']);
+                $f3->set('phoneNumber', $_SESSION['phoneNumber']);
                 $f3->reroute('/Profile');
                 /*echo $template::instance()->render('/views/Profile_Summary.php');*/
             }
@@ -126,7 +130,6 @@ $f3->route('GET|POST /Profile',
     function($f3)
     {
         $_SESSION=array();
-        $GLOBALS ;
         $template = new Template();
         if (isset($_POST['submit']) && !empty($_POST)) {
 
